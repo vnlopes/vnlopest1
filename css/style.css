@@ -1,0 +1,419 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(0, 1, 14);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+}
+
+.astronault {
+  background-image: url(..//img/astronaut-transformed.webp);
+  height: 15rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 7rem;
+  border-bottom: 10px solid rgb(7, 65, 255);
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.moonFloating {
+  width: 50%;
+  align-self: flex-start;
+  margin-top: 5rem;
+}
+
+.moonFloating svg {
+  fill: white;
+  width: 60px;
+  height: 60px;
+  transition: 0.3s;
+  animation: floating alternate ease-in-out infinite 3s;
+}
+
+.moonFloating svg:hover {
+  fill: rgb(7, 65, 255);
+}
+
+@keyframes floating {
+  to {
+    transform: translateY(0px);
+  }
+  from {
+    transform: translateY(10px);
+  }
+}
+
+.Presentation {
+  font-size: 25px;
+  gap: 5px;
+  font-weight: 400;
+  font-family: "inter", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+mark {
+  color: rgb(7, 65, 255);
+  text-decoration: none;
+}
+
+.sublinhado {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links div:hover {
+  transform: scale(0.9);
+}
+
+.links div {
+  transition: 0.3s;
+  filter: drop-shadow(rgba(0, 0, 0, 0.733) 1px -8px 8px);
+}
+
+.links {
+  line-height: 100px;
+  font-family: "inter", sans-serif;
+  font-weight: 700;
+  font-size: 10rem;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.home {
+  color: rgb(255, 255, 255);
+}
+
+.network {
+  color: rgb(7, 65, 255);
+  letter-spacing: -10px;
+}
+
+.about1 {
+  color: white;
+}
+
+.topMain {
+  margin-top: 9rem;
+  width: 1200px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.memphis {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18rem;
+}
+
+.memphis .paralelepipedo {
+  align-self: flex-end;
+  animation: floating 5s infinite ease-in-out;
+}
+
+.memphis .piramide {
+  animation: rotate infinite ease-in-out alternate 6s;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateY(10px) rotate(25deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(10px) rotate(25deg);
+  }
+}
+
+.pic {
+  border-radius: 100%;
+  border: 10px solid rgb(7, 65, 255);
+  margin-left: 10px;
+  transition: 0.6s;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pic:hover {
+  transform: scale(1.05);
+  border: 15px solid rgb(7, 65, 255);
+  position: relative;
+}
+
+.men {
+  transition: 0.3s;
+}
+
+.men:hover {
+  filter: drop-shadow(rgb(7, 65, 255) 0 0 60px);
+}
+
+@media (max-width: 1000px) {
+  footer {
+    margin-top: 15rem;
+  }
+
+  body {
+    height: 100%;
+  }
+
+  .back {
+    display: none;
+  }
+
+  .about .p1,
+  .p2 {
+    font-size: 12px;
+  }
+
+  .about {
+    margin-top: 5rem;
+    width: 95%;
+  }
+
+  .astronault {
+    height: 6rem;
+  }
+
+  main {
+    width: 60%;
+  }
+
+  .links {
+    font-size: 6rem;
+    line-height: 60px;
+  }
+
+  .topMain {
+    margin-top: 4rem;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    gap: 10rem;
+    position: static;
+    width: 100%;
+  }
+
+  .Presentation {
+    margin-top: -5rem;
+    font-size: 12px;
+    width: 95%;
+    margin-bottom: 5rem;
+  }
+
+  .memphis {
+    display: none;
+  }
+
+  .links {
+    align-self: flex-start;
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  .images {
+    flex-direction: column;
+  }
+
+  .pic {
+    border: 3px solid rgb(7, 65, 255);
+    height: 200px;
+    width: 200px;
+  }
+
+  .pic:hover {
+    border: 3px solid rgb(7, 65, 255);
+  }
+
+  .men {
+    display: none;
+  }
+}
+
+.p2 {
+  margin-top: 10px;
+}
+
+.about {
+  gap: 3rem;
+  color: white;
+  font-family: "inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.mainBotton {
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.icons {
+  margin-bottom: 20px;
+  gap: 10px;
+  flex-direction: row;
+  display: flex;
+}
+
+footer svg {
+  fill: white;
+  height: 30px;
+  width: 30px;
+}
+
+.icons i:hover {
+  transform: scale(0.92);
+  filter: drop-shadow(rgba(0, 0, 0, 0.486) 3px 3px 10px);
+}
+
+.icons i {
+  transition: 0.3s;
+  display: flex;
+  font-size: 28px;
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.copyright {
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
+}
+
+.back {
+  align-self: center;
+  z-index: -1;
+  position: absolute;
+}
+
+footer {
+  box-shadow: #0066ff -2px -2px 60px;
+  border-top-left-radius: 100px;
+  width: 100%;
+  padding: 40px 0 60px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background: linear-gradient(to top, #013f9b 0%, #0066ff 100%);
+  gap: 10px;
+}
+
+.line {
+  background-color: #ffffff;
+  width: 20px;
+  height: 6px;
+  margin-top: -43px;
+  border-radius: 40px;
+  position: relative;
+  animation: underline-animation 2s linear infinite;
+}
+
+@keyframes underline-animation {
+  0% {
+    left: -132px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 138px;
+    opacity: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  main {
+    max-width: 1000px;
+  }
+
+  .topMain {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .links {
+    font-size: 40px;
+    line-height: 25px;
+  }
+
+  .network {
+    letter-spacing: -2px;
+  }
+
+  .pic {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0066ff;
+}
